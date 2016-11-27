@@ -1,0 +1,89 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="csse_Master.master.cs" Inherits="csse_Master" %>
+
+<!DOCTYPE html>
+<html lang="en,fr,de,bn,hi,ta">
+	<head runat="server">
+	<title>CSSE Portal</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="./css/style.css">
+        <script src="./js/script.js" type="text/javascript"> </script>
+		<asp:ContentPlaceHolder ID="head" runat="server">
+        </asp:ContentPlaceHolder>
+	</head>
+	
+<body>
+	
+	<!-- **************************Header******************************* -->
+	<div id="header">
+		<h3 class="des"> <Span class="ss">C</span>omputer <span class="ss">S</span>ociety of <span class="ss">S</span>oftware <span class="ss">E</span>ngineers </h3>
+		<a href="Index.aspx" >
+	<img id="lgo" src= "../logo/csselogo.png" alt="CSSE">
+	</a>
+	</div>
+	
+	<!--*******************NavBar***************************-->
+	
+    <ul class="topnav" id="myTopnav">
+	<li class="ddl">
+	<div class="active" > <a href="index.aspx"> <span id="hh">H</span><img id="logo1" src="../logo/blue-home.png" alt="Home"></a></div>
+	</li>
+    <li class="dd">
+    <a class="dropbtn" href="#">Administration</a>
+    <div class="dd-content">
+    <a href="tlogin.aspx">Faculty</a>
+     <a href="login.aspx">Student</a>
+    </div></li> 
+	<li><a class="dropbtn" href="#">Event</a></li>
+	<li><a href="#" class="dropbtn">Member's</a>
+	<li><a href="#" class="dropbtn">Result</a></li>
+	<li><a href="fill.aspx" class="dropbtn">Suggestion</a></li>
+	<li><a href="#" class="dropbtn">Contact Us</a></li>
+	<li><a href="#" class="dropbtn">About</a></li>
+    <li class="icon" href="javascript:void(0);" onclick="myFunction(this)">
+	<a><div class="icon">
+	  <div class="bar1"></div>
+	  <div class="bar2"></div>
+	  <div class="bar3"></div>
+	</div>
+	</a></li>
+	</ul>
+
+	
+    <div id="m1">
+		
+		<asp:ContentPlaceHolder ID="maincon3" runat="server">
+
+		</asp:ContentPlaceHolder>
+	
+	</div>
+
+	
+	<!-- *******************************Main Content*******************************-->
+	
+	<div class="main">
+
+        <asp:ContentPlaceHolder id="maincon1" runat="server">
+
+        </asp:ContentPlaceHolder>
+
+		
+	</div>
+	
+	
+	<!------------------NOTICE----------------->
+	<div id="notice">
+        <asp:ContentPlaceHolder ID="maincon2" runat="server">
+
+        </asp:ContentPlaceHolder>
+          
+	</div>
+	
+	
+	<!------------------Footer----------------->
+	<div id="footer"><br />
+        <marquee behavior="alternate" scrollamount="10"><p >Developed By: <i>A</i>bdul <i>J</i>unaid, <i>A</i>nand <i>D</i>ubey, <i>R</i>ajat <i>S</i>rivastav</p></marquee>
+	</div>
+	
+	</body>
+</html>
